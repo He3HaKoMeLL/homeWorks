@@ -1,0 +1,41 @@
+num = int(input( "ведите цифру : " ))
+sum_num = 0
+for i in range(1, num+1): 
+    sum_num += i
+    print(sum_num)
+############### домашка  со ******* но  не проконало
+
+name=[]
+age=[]
+number=[] 
+list_baza=[name,number,age]
+for baza in list_baza: 
+  while baza !=1: 
+    name.append(input('введите свое имя:'))
+    if name != 1:
+      age.append((int(input('сколько вам лет:'))))
+      if age != 1:   
+        print ('хотите ли вы поделиться с нами своим номером')
+        quest= input('Да ли Нет??').title()
+        if quest == 'Д':
+            number.append(int(input('какой у вас номер: +998 ')))
+            print('спасибо за регистрацию')        
+        while quest !='Да':
+          if quest in 'Нет':
+            print('может быть по думаешь')
+            quest= input('Да ли Нет??').title()   
+            while quest !='Да':  
+              print('Ну пожалуйста')
+              quest= input('Да ли Нет??').title()
+              if quest !='Да':                
+               print (baza) 
+            break           
+          while quest =='Да':
+            number.append(int(input('какой у вас номер: +998 ')))
+           
+            print('спасибо за регистрацию')        
+          break 
+        break
+  break
+print(list_baza) 
+  
