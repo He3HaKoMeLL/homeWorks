@@ -1,0 +1,30 @@
+import time
+
+while True:
+    first = int(input('Введиты первую цифру\n'))
+    if first == 0:
+        print('Извините но символ не допустимый')
+    elif first != 0:
+        print('ведите символ + - * /')
+    symbol = input()
+    while symbol:
+        if symbol in '+''-''*''/''%':
+            break
+        elif symbol != '+''-''*''/':
+            print('символ не подходит, повторите еще раз +-*/')
+            symbol = input('ведите символ + - * /')
+    second = int(input('ведите вторую цифру'))
+
+    if first == 0:
+        print('ваша вторая цифра {}'.format(first))
+    print('{}{}{} ='.format(first, symbol, second))
+    if symbol == '+':
+        print('мой ответ', (first + second))
+    elif symbol == '-':
+        print('мой ответ', (first - second))
+    elif symbol == '*':
+        print('мой ответ', (first * second))
+    elif symbol == '/':
+        print('мой ответ', (first / second))
+
+    time.sleep(2)
